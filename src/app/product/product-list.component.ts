@@ -20,7 +20,7 @@ export class ProductListComponent implements OnInit {
     return this._filterBy
   }
 
-  set ng(value) {
+  set filterBy(value) {
     this._filterBy = value;
     this.filterdProducts = this._filterBy ? this.filterdList(this.filterBy) : this.products
   }

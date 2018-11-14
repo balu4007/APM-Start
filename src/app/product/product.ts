@@ -1,4 +1,5 @@
 export interface Iproduce{
+    id:number;
     productName:string;
     productCode:string;
     releaseDate:string;

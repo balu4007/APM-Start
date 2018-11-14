@@ -1,7 +1,7 @@
-<!--The whole content below can be removed with the new code.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!!
-  </h1>
-  <pm-product></pm-product>
+<ul class="navbar navbar-expand-lg navbar-light bg-light">
+  <li class="navbar-brand"><a [routerLink]="['/welcome']">Home</a></li>
+  <li class="navbar-brand"><a [routerLink]="['/products']">products</a></li>
+</ul>
+<div class="container">
+  <router-outlet></router-outlet>
 </div>
