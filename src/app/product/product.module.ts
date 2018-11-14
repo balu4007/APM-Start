@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 import { ProductDetailsComponent } from './product-details.component';
 import { ProductListComponent } from './product-list.component';
-import { RouterModule } from '@angular/router';
-import { ProductDetailGuard } from './product-detail.guard';
 import { FormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
+import { ProductRoutingModule } from './product-routing.module';
 
 @NgModule({
   declarations: [
@@ -14,10 +13,7 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     FormsModule,
     SharedModule,
-    RouterModule.forChild([
-      { path: 'products', component: ProductListComponent },
-      { path: 'products/:id', canActivate: [ProductDetailGuard], component: ProductDetailsComponent },
-    ])
+    ProductRoutingModule
   ]
 })
 export class ProductModule { }
